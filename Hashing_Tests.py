@@ -5,7 +5,7 @@ def c_mulg(a, b):
   return eval(hex((a * b) & (2**64 - 1))[:-1])
 
 # hash implemented as a function
-def 64hash(self):
+def hash64(self):
   if not self:
     return 0 # empty
   value = ord(self[0]) << 7
@@ -39,7 +39,7 @@ class string:
 
 # runs above hashing functions and native python hash()
 def getHashin(val):
-    print(py25hash(val))
+    print(hash64(val))
 
     print(string.__hash__(val))
 
